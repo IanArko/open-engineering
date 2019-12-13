@@ -43,8 +43,11 @@
             network.on( 'click', function(properties) {
                 var ids = properties.nodes;
                 var clickedNodes = nodes.get(ids);
-                console.log(clickedNodes[0].id)
-                window.open(clickedNodes[0].id + ".html")
+                //console.log(clickedNodes[0].id)
+                if(clickedNodes[0].id != 'graph' && clickedNodes[0].id != 'start') {
+                    window.open(clickedNodes[0].id + ".html")
+                }
+
             });
         </script>
     </div>
